@@ -40,3 +40,26 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let playerPoints = 0;
+    let computerPoints = 0;
+    for (let i = 1; i < 6; i++) {
+        let roundResult = playRound(prompt(`Round ${i}. Choose Rock, Paper or Scissors`), computerPlay());
+        if (roundResult.includes("Win")) {
+            playerPoints++;
+            console.log(`${roundResult}. You have ${playerPoints} points at round ${i}!`);
+        } else if (roundResult.includes("Lose")) {
+            computerPoints++;
+            console.log(`${roundResult}. You have ${playerPoints} points at round ${i}!`);
+        } else {
+            console.log(`${roundResult}. You have ${playerPoints} points at round ${i}!`);
+        }
+    } 
+    if (playerPoints > computerPoints) {
+        return "You won the game!";
+    } else if (playerPoints < computerPoints) {
+        return "You lost the game!";
+    } else {
+        return "Draw!"
+    }
+}
