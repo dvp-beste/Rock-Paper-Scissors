@@ -3,25 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <title>R-P-S</title>
+        <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
     <body>
         <h1>ROCK - PAPER - SCISSORS</h1>
         <div class = "button-container">
+            <p>Make a Choice!</p>
             <button class = selection id = "Rock">Rock</button>
             <button class = selection id = "Paper">Paper</button>
             <button class = selection id = "Scissors">Scissors</button>
         </div>
         <div class = "results-container">
+            <div class = "choicetable">
+                <div class="choices">
+                    <h3>Your choice</h3>
+                    <div id="PlayerChoice">-</div>
+                </div>
+                <div class="choices">
+                    <h3>Computer's choice</h3>
+                    <div id="ComputerChoice">-</div>
+                </div>
+            </div>
+            <div id = RoundResult>-</div>
+            <div class = "scoretable">
+                <div class = "scores">
+                    <h3>Your Score</h3>
+                    <div id = "PlayerScore"></div>
+                </div>
+                <div class="scores">
+                    <h3>Computer's Score</h3>
+                    <div id = "ComputerScore"></div>
+                </div> 
+                
+            </div> 
+            
+        </div>
+        <div class = "game-result">
             <h2>GAME RESULT</h2>
-            <div id = GameResult></div>
+            <div id = GameResult>-</div>
             <button id = NewGame>New Game</button>
-            <h3>Result of the Round</h3>
-            <div id = RoundResult></div>
-            <h3>Player Score</h3>
-            <div id = "PlayerScore"></div>
-            <h3>Computer Score</h3>
-            <div id = "ComputerScore"></div>
         </div>
         
     </body>
